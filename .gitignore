@@ -1,0 +1,9 @@
+node_modules/
+dist/
+target/
+.vercel/
+.env
+.env.*
+!.env.example
+.DS_Store
+backend/.mvn/wrapper/maven-wrapper.jar
