@@ -533,6 +533,356 @@ label {
   margin: 6px 0 0;
 }
 
+.learning-nav,
+.topic-button-list,
+.todo-list,
+.command-list {
+  display: grid;
+  gap: 8px;
+}
+
+.nav-tab {
+  background: transparent;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.nav-tab.active {
+  background: #e8f0fe;
+  border-color: #d2e3fc;
+  color: var(--blue);
+}
+
+.learning-progress-mini {
+  background: #f8fbff;
+  border: 1px solid #d2e3fc;
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+}
+
+.learning-progress-mini div:first-child {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.learning-progress-mini span,
+.learning-progress-mini p,
+.todo-summary p,
+.practice-expected,
+.topic-summary {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.learning-progress-mini strong {
+  color: var(--blue);
+}
+
+.progress-track {
+  background: #e8eaed;
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.progress-track.large {
+  height: 12px;
+}
+
+.progress-track span {
+  background: var(--green);
+  display: block;
+  height: 100%;
+  min-width: 0;
+  transition: width 180ms ease;
+}
+
+.learning-layout,
+.gemini-layout {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+}
+
+.topic-selector,
+.gemini-setup {
+  align-self: start;
+}
+
+.topic-selector {
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+}
+
+.lesson-button {
+  align-items: stretch;
+  display: grid;
+  gap: 4px;
+  justify-items: start;
+  min-height: auto;
+  padding: 12px;
+  text-align: left;
+}
+
+.lesson-button span {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.lesson-button strong {
+  font-size: 14px;
+}
+
+.lesson-button small {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.lesson-button.active {
+  background: #e8f0fe;
+  border-color: #d2e3fc;
+}
+
+.topic-detail,
+.practice-card,
+.todo-topic,
+.gemini-ask,
+.gemini-result {
+  align-content: start;
+  align-self: start;
+}
+
+.topic-heading {
+  align-items: start;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.topic-heading h3 {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 2px 0 0;
+}
+
+.topic-section {
+  display: grid;
+  gap: 8px;
+}
+
+.topic-section h4 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.topic-section p {
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.demo-strip {
+  background: #f8fafd;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+.demo-strip code,
+.command-list code,
+.gemini-result pre {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--code);
+  display: block;
+  font-family: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  padding: 10px;
+  white-space: pre-wrap;
+}
+
+.demo-strip p {
+  color: var(--muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.showcase-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.showcase-item {
+  align-items: start;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: flex;
+  gap: 8px;
+  line-height: 1.45;
+  padding: 10px;
+}
+
+.showcase-item svg {
+  color: var(--green);
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+.practice-grid,
+.todo-board {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.practice-card.selected {
+  border-color: #b7dfc1;
+}
+
+.practice-steps {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.practice-steps li {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.practice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.todo-summary {
+  grid-column: 1 / -1;
+}
+
+.todo-summary strong {
+  font-size: 28px;
+}
+
+.todo-row {
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px;
+}
+
+.todo-row input {
+  accent-color: var(--green);
+  margin: 0;
+  width: auto;
+}
+
+.todo-row span {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.todo-row.done {
+  background: #e6f4ea;
+  border-color: #b7dfc1;
+}
+
+.todo-row.done span {
+  color: #137333;
+  text-decoration: line-through;
+}
+
+.setup-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.setup-item {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+}
+
+.setup-item span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.setup-item strong {
+  color: #8a5a00;
+}
+
+.setup-item small {
+  color: var(--muted);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.setup-item.ok {
+  background: #e6f4ea;
+  border-color: #b7dfc1;
+}
+
+.setup-item.ok strong {
+  color: #137333;
+}
+
+.gemini-layout .gemini-result {
+  grid-column: 1 / -1;
+}
+
+.gemini-result.ok {
+  border-color: #b7dfc1;
+}
+
+.result-meta {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.result-meta span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.error-text {
+  background: #fce8e6;
+  border: 1px solid #f6aea9;
+  border-radius: 8px;
+  color: #9b1c12;
+  margin: 0;
+  padding: 10px;
+}
+
 @media (max-width: 1120px) {
   .agent-shell {
     grid-template-columns: 1fr;
@@ -549,8 +899,14 @@ label {
 
   .brand,
   .side-actions,
+  .learning-nav,
+  .learning-progress-mini,
   .agent-concept-mini {
     grid-column: 1 / -1;
+  }
+
+  .learning-nav {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
@@ -571,7 +927,14 @@ label {
   .agent-overview-grid,
   .agent-grid,
   .concept-glossary,
-  .agent-form-pair {
+  .agent-form-pair,
+  .learning-layout,
+  .practice-grid,
+  .todo-board,
+  .gemini-layout,
+  .showcase-grid,
+  .setup-grid,
+  .learning-nav {
     grid-template-columns: 1fr;
   }
 
