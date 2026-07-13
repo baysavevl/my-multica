@@ -5,6 +5,7 @@ public enum MulticaCommandKind {
     DAEMON_RESTART,
     WORKSPACE_LIST,
     RUNTIME_LIST,
+    RUNTIME_PROFILE_LIST,
     AGENT_LIST,
     AGENT_CREATE,
     PROJECT_LIST,

@@ -20,7 +20,7 @@ public class MulticaCommandRunner implements MulticaCommandExecutor {
     private static final Duration DEFAULT_TIMEOUT = Duration.ofSeconds(10);
     private static final Set<String> COMMAND_WORDS = Set.of(
             "multica", "daemon", "status", "restart", "runtime", "list",
-            "agent", "create", "project", "repo", "add", "issue", "assign"
+            "profile", "agent", "create", "project", "repo", "add", "issue", "assign"
     );
     private static final Set<String> FLAGS_WITH_DISPLAYABLE_VALUES = Set.of(
             "--output", "--status", "--priority", "--visibility"

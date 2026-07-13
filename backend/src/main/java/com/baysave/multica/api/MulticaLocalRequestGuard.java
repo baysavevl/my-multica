@@ -18,7 +18,8 @@ public class MulticaLocalRequestGuard extends OncePerRequestFilter {
 
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
-        return !request.getRequestURI().startsWith("/api/multica/");
+        String uri = request.getRequestURI();
+        return !uri.startsWith("/api/multica/") && !uri.startsWith("/api/gemini/");
     }
 
     @Override
@@ -33,12 +34,12 @@ public class MulticaLocalRequestGuard extends OncePerRequestFilter {
         }
 
         if (!isLoopback(request.getRemoteAddr())) {
-            reject(response, "Multica control center only accepts local requests");
+            reject(response, "Local control center only accepts local requests");
             return;
         }
 
         if (!HEADER_VALUE.equals(request.getHeader(HEADER_NAME))) {
-            reject(response, "Multica control center request header is required");
+            reject(response, "Local control center request header is required");
             return;
         }
 
